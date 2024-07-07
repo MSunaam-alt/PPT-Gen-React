@@ -22,7 +22,7 @@ export default function Navbar({ newProject, downloadPpt }) {
   document.addEventListener("mousedown", closeOpenMenus);
 
   return (
-    <nav className=" w-full shadow-lg">
+    <nav className="px-4 md:px-0 w-full shadow-lg z-20">
       <div className="h-20 container mx-auto flex items-center justify-between">
         <h1 className="text-xl font-bold">
           PPT<span className="text-[red]">Gen.</span>

@@ -21,7 +21,7 @@ export default function SideBarSlide({
   return (
     <div
       key={idx}
-      className={`relative shrink-0 w-full h-20 px-2 transition-all duration-100 ease-in py-1 border rounded-lg  ${
+      className={`relative shrink-0  w-28 md:w-full md:h-20 px-2 transition-all duration-100 ease-in py-1 border rounded-lg  ${
         activeSlide === idx ? "border-[red] s" : "border-black "
       }border-black group`}
     >

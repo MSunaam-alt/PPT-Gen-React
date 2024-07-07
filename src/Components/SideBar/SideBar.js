@@ -36,11 +36,14 @@ export default function SideBar({
   };
   return (
     <aside
-      className={`w-40 pt-7 ${
+      className={`w-full bg-white md:h-full h-32 md:w-40 pt-7 ${
         !show ? "-translate-x-40" : ""
-      }  transition-all duration-300 border-r ease-in-out pr-5 left-0 absolute px-2 pt-10 pb-5 flex flex-col shrink-0 gap-2 overflow-y-auto top-20 bottom-0`}
+      }  transition-all duration-300 border-r ease-in-out pr-5 left-0 absolute px-2 pt-10 pb-5 flex flex-row md:flex-col shrink-0 gap-2 overflow-y-auto top-20 bottom-0`}
     >
-      <div className="absolute top-4 right-5" onClick={() => setShow(false)}>
+      <div
+        className="hidden md:block absolute top-4 right-5"
+        onClick={() => setShow(false)}
+      >
         <FaChevronLeft />
       </div>
       {slides &&
@@ -60,7 +63,7 @@ export default function SideBar({
         })}
       {/* Add More Slide Button */}
       <div
-        className={`shrink-0 grow-0 relative w-full h-20 px-2 transition-all duration-100 ease-in border rounded-lg border-black group`}
+        className={`shrink-0 grow-0 relative w-28 md:w-full md:h-20 px-2 transition-all duration-100 ease-in border rounded-lg border-black group`}
       >
         <div
           className=" w-8 h-8  flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black z-20 overflow-visible"

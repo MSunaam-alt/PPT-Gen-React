@@ -141,7 +141,7 @@ function App() {
         )}
         <div
           className={`flex ${
-            showSideBar ? "ml-40  px-4" : ""
+            showSideBar ? "md:ml-40  mt-32 md:px-4" : ""
           } flex-row transition-all duration-300 ease-in-out items-center justify-between container mx-auto`}
         >
           {!loading && !slides.length == 0 && (
@@ -169,7 +169,7 @@ function App() {
             <div
               className={`${
                 !loading && !slides.length == 0 && "border"
-              } shrink-0 grow-0 min-w-full max-w-full h-[75vh] ${
+              } shrink-0 grow-0 min-w-full max-w-full md:h-[75vh] h-[55vh] ${
                 !loading && !slides.length == 0 && "border-black"
               }`}
             >
