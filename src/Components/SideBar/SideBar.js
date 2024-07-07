@@ -38,7 +38,7 @@ export default function SideBar({
     <aside
       className={`w-40 pt-7 ${
         !show ? "-translate-x-40" : ""
-      }  transition-all duration-300 border-r ease-in-out pr-5 left-0 absolute px-2 pt-14 pb-5 flex flex-col shrink-0 gap-2 overflow-y-auto top-20 bottom-0`}
+      }  transition-all duration-300 border-r ease-in-out pr-5 left-0 absolute px-2 pt-10 pb-5 flex flex-col shrink-0 gap-2 overflow-y-auto top-20 bottom-0`}
     >
       <div className="absolute top-4 right-5" onClick={() => setShow(false)}>
         <FaChevronLeft />
