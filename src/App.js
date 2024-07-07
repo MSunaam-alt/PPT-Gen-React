@@ -37,7 +37,7 @@ function App() {
       setLoading(true);
       // console.log(project);
       axios
-        .post("http://msunaamalt.pythonanywhere.com/create_ppt", project)
+        .post("https://msunaamalt.pythonanywhere.com/create_ppt", project)
         .then((res) => {
           // console.log(res.data);
           changeSlides(res.data);
@@ -53,7 +53,7 @@ function App() {
     setLoading(true);
     axios
       .post(
-        "http://msunaamalt.pythonanywhere.com/download",
+        "https://msunaamalt.pythonanywhere.com/download",
         { slides: slides },
         { responseType: "blob" }
       )
