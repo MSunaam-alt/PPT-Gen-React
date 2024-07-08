@@ -141,7 +141,7 @@ function App() {
         )}
         <div
           className={`flex ${
-            showSideBar ? "md:ml-40 md:px-4" : ""
+            showSideBar ? "md:ml-40 md:px-4 mt-40 md:mt-0" : ""
           } flex-row transition-all duration-300 ease-in-out items-center justify-between container mx-auto`}
         >
           {!loading && !slides.length == 0 && (
