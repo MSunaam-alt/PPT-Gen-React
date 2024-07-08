@@ -227,7 +227,7 @@ function App() {
             Slide: {slideCounter + 1} of {slides.length}
           </div>
         )}
-        <Prompt />
+        {/* <Prompt /> */}
       </div>
     </>
   );
