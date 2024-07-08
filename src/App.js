@@ -178,7 +178,7 @@ function App() {
                 <Slide slide={slides[slideCounter]} />
               )}
               {slides.length === 0 && !showCreate && (
-                <div className="flex items-center justify-center w-full ">
+                <div className="flex items-center justify-center w-full md:h-[65vh] h-[55vh]">
                   <div className="flex flex-col items-center gap-1">
                     <div className="loader"></div>
                     <span className="text-center text-sm">
