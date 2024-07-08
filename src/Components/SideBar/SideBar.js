@@ -41,7 +41,7 @@ export default function SideBar({
       }  transition-all duration-300 border-r ease-in-out pr-5 left-0 absolute px-2 pt-10 pb-5 flex flex-row md:flex-col shrink-0 gap-2 overflow-y-auto top-20 bottom-0`}
     >
       <div
-        className="hidden md:block absolute top-4 right-5"
+        className="hidden md:block absolute top-2 right-5"
         onClick={() => setShow(false)}
       >
         <FaChevronLeft />

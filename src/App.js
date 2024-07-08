@@ -141,7 +141,7 @@ function App() {
         )}
         <div
           className={`flex ${
-            showSideBar ? "md:ml-40  mt-32 md:px-4" : ""
+            showSideBar ? "md:ml-40 md:px-4" : ""
           } flex-row transition-all duration-300 ease-in-out items-center justify-between container mx-auto`}
         >
           {!loading && !slides.length == 0 && (
@@ -163,7 +163,7 @@ function App() {
             </button>
           )}
           <div
-            className="flex items-center justify-center overflow-x-auto gap-2 h-full w-[80vw]"
+            className="flex items-center justify-center overflow-x-auto gap-2  w-[80vw]"
             id="slideContainer"
           >
             <div
@@ -177,7 +177,7 @@ function App() {
                 <Slide slide={slides[slideCounter]} />
               )}
               {slides.length === 0 && !showCreate && (
-                <div className="flex items-center justify-center w-full h-full">
+                <div className="flex items-center justify-center w-full ">
                   <div className="flex flex-col items-center gap-1">
                     <div className="loader"></div>
                     <span className="text-center text-sm">
@@ -187,7 +187,7 @@ function App() {
                 </div>
               )}
               {loading && slides.length != 0 && (
-                <div className="flex items-center justify-center w-full h-full">
+                <div className="flex items-center justify-center w-full ">
                   <div className="flex flex-col items-center gap-1">
                     <div className="loader"></div>
                     <span className="text-center text-sm">
