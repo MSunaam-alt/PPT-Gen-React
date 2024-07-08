@@ -7,6 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import SideBar from "./Components/SideBar/SideBar";
 import PPTForm from "./Components/PPTForm/pptForm";
+import Prompt from "./Components/Prompt/Prompt";
 
 function App() {
   const [slides, setSlides] = useState([]);
@@ -141,8 +142,8 @@ function App() {
         )}
         <div
           className={`flex ${
-            showSideBar ? "md:ml-40 md:px-4 mt-40 md:mt-0" : ""
-          } flex-row transition-all duration-300 ease-in-out items-center justify-between container mx-auto`}
+            showSideBar ? "md:ml-40 md:px-4 mt-32 md:mt-0" : ""
+          } flex-row mb-24 transition-all duration-300 ease-in-out items-center justify-between container mx-auto`}
         >
           {!loading && !slides.length == 0 && (
             <button
@@ -169,7 +170,7 @@ function App() {
             <div
               className={`${
                 !loading && !slides.length == 0 && "border"
-              } shrink-0 grow-0 min-w-full max-w-full md:h-[75vh] h-[55vh] ${
+              } shrink-0 grow-0 min-w-full max-w-full md:h-[65vh] h-[55vh] ${
                 !loading && !slides.length == 0 && "border-black"
               }`}
             >
@@ -226,6 +227,7 @@ function App() {
             Slide: {slideCounter + 1} of {slides.length}
           </div>
         )}
+        <Prompt />
       </div>
     </>
   );

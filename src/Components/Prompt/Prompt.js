@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Prompt({ setProject, loading }) {
+export default function Prompt({}) {
   const [numSlides, setNumSlides] = useState(5);
   const [title, setTitle] = useState(null);
   return (
@@ -13,23 +13,22 @@ export default function Prompt({ setProject, loading }) {
           onSubmit={(e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
-            setProject(formData);
           }}
         >
           <fieldset className="flex flex-col w-full">
             <label htmlFor="title" className="text-xs mb-1">
-              Project Title
+              Instruction
             </label>
             <input
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Set your presentation description"
+              placeholder="E.g. Add a bullet point"
               name="title"
               id="title"
               type="text"
-              className="py-1 px-2 border w-full border-black rounded focus:outline-none"
+              className="py-1 px-2 border w-full md:w-1/2 border-black rounded focus:outline-none"
             />
           </fieldset>
-          <fieldset className="flex flex-col w-full">
+          {/* <fieldset className="flex flex-col w-full">
             <label htmlFor="numSlides" className="text-xs mb-1">
               Number of Slides
             </label>
@@ -43,16 +42,15 @@ export default function Prompt({ setProject, loading }) {
               value={numSlides}
               className="py-1 px-2 border w-32 border-black rounded focus:outline-none"
             />
-          </fieldset>
-          {!loading && (
+          </fieldset> */}
+          {
             <button
               className="h-max py-1 px-3 rounded-lg bg-black text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:border hover:border-black border border-transparent"
               type="submit"
             >
-              Create
+              Update
             </button>
-          )}
-          {loading && <div className="loader"></div>}
+          }
         </form>
       </div>
     </div>

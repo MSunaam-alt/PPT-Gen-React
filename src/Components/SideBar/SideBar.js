@@ -36,9 +36,9 @@ export default function SideBar({
   };
   return (
     <aside
-      className={`w-full bg-white md:h-full h-32 md:w-40 pt-7 ${
+      className={`fixed left-0 top-20 bottom-24 bg-white md:w-40 w-full h-32 md:h-auto pt-7 overflow-y-auto ${
         !show ? "-translate-x-40" : ""
-      }  transition-all duration-300 border-r ease-in-out pr-5 left-0 fixed px-2 pt-10 pb-5 flex flex-row md:flex-col shrink-0 gap-2 overflow-y-auto top-20 bottom-0`}
+      }  transition-all duration-300 border-r ease-in-out pr-5 px-2 pb-5 flex flex-row md:flex-col gap-2 `}
     >
       <div
         className="hidden md:block absolute top-2 right-5"

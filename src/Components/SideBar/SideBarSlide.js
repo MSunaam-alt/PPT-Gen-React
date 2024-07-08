@@ -21,7 +21,7 @@ export default function SideBarSlide({
   return (
     <div
       key={idx}
-      className={`relative shrink-0  w-28 md:w-full md:h-20 px-2 transition-all duration-100 ease-in py-1 border rounded-lg  ${
+      className={`relative shrink-0 w-28 md:w-full md:h-20 px-2 transition-all duration-100 ease-in py-1 border rounded-lg  ${
         activeSlide === idx ? "border-[red] s" : "border-black "
       }border-black group`}
     >
@@ -39,7 +39,7 @@ export default function SideBarSlide({
             setShowContext(false);
           }}
           ref={contextRef}
-          className="bg-slate-200 absolute left-10 top-0 rounded-lg overflow-clip z-20 cursor-pointer"
+          className="bg-slate-200 absolute left-5 top-14 rounded-lg overflow-clip z-20 cursor-pointer"
         >
           <li
             onClick={() => {
