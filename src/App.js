@@ -7,7 +7,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import SideBar from "./Components/SideBar/SideBar";
 import PPTForm from "./Components/PPTForm/pptForm";
-import Prompt from "./Components/Prompt/Prompt";
 
 function App() {
   const [slides, setSlides] = useState([]);
@@ -16,6 +15,8 @@ function App() {
   const [slideCounter, setSlideCounter] = useState(0);
   const [showSideBar, setShowSideBar] = useState(false);
   const [showCreate, setShowCreate] = useState(true);
+
+  const baseUrl = "https://msunaamalt.pythonanywhere.com/pptApi";
 
   const changeSlideCounter = (num) => {
     setSlideCounter(num);
@@ -38,7 +39,7 @@ function App() {
       setLoading(true);
       // console.log(project);
       axios
-        .post("https://msunaamalt.pythonanywhere.com/create_ppt", project)
+        .post(`${baseUrl}/create_ppt`, project)
         .then((res) => {
           // console.log(res.data);
           changeSlides(res.data);
@@ -53,11 +54,7 @@ function App() {
   const downloadPpt = () => {
     setLoading(true);
     axios
-      .post(
-        "https://msunaamalt.pythonanywhere.com/download",
-        { slides: slides },
-        { responseType: "blob" }
-      )
+      .post(`${baseUrl}/download`, { slides: slides }, { responseType: "blob" })
       .then((res) => {
         const blob = new Blob([res.data], {
           type: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
